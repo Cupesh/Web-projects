@@ -8,7 +8,7 @@ function connectToDb() {
         $username = htmlspecialchars($_POST['username']);
         $password = htmlspecialchars($_POST['password']);
 
-        $connection = mysqli_connect('localhost', $username, $password, 'testdb');
+        $connection = mysqli_connect('localhost', $username, $password, 'tma_db');
         if (!$connection){
             echo 'Connection error: '.mysqli_connect_error();
             session_start();
@@ -27,7 +27,7 @@ function connectToDb() {
 <html>
 
 <?php include('templates/header.php') ?>
-
+<body class="blue darken-2">
 <section class="container black-text">
     <p></p>
     <form class="blue lighten-1 z-depth-1" action="index.php" method="POST">
@@ -48,7 +48,7 @@ function connectToDb() {
         </div>
     </form>
 </section>
-
+</body>
 <?php include('templates/footer.php') ?>
 
 </html>
