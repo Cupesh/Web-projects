@@ -48,7 +48,6 @@ function connectToDb() {
         </div>
     </form>
 </section>
-</body>
-<?php include('templates/footer.php') ?>
 
+<?php include('templates/footer.php') ?>
 </html>

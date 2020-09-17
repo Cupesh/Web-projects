@@ -18,6 +18,13 @@ if ($_SESSION['loggedIn'] == true) {
 
 <?php include('templates/header.php') ?>
 
+<ul id="sidenav-left" class="sidenav sidenav-fixed">
+    <li>
+        <a href="#">ADMIN</a>
+    </li>
+
+</ul>
+
 <div class="row">
     <div class="col s2 l3">
         <ul>
