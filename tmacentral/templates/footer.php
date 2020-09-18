@@ -11,4 +11,9 @@
             $('.sidenav').sidenav();
             });
     </script>
+    <script>
+            $(document).ready(function() {
+            $('.collapsible').collapsible();
+            });
+    </script>
 </body>

@@ -5,19 +5,18 @@ if (isset($_POST['login'])){
 }
 
 function connectToDb() {
+        session_start();
         $username = htmlspecialchars($_POST['username']);
         $password = htmlspecialchars($_POST['password']);
 
         $connection = mysqli_connect('localhost', $username, $password, 'tma_db');
         if (!$connection){
             echo 'Connection error: '.mysqli_connect_error();
-            session_start();
             $_SESSION['loggedIn'] = false;
         } else {
-            session_start();
+            $_SESSION['user'] = strtoupper($username);
             $_SESSION['loggedIn'] = true;
             header('Location: menu.php');
-            exit();
         }
 }
 
