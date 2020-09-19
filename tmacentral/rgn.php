@@ -16,5 +16,6 @@ if ($_SESSION['loggedIn'] == true) {
     <?php include('templates/sidenav.php') ?>
 
     <?php include('templates/footer.php') ?>
+
 </body>
 </html>

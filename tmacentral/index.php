@@ -1,5 +1,4 @@
 <?php
-
 if (isset($_POST['login'])){
     connectToDb();
 }
@@ -24,9 +23,25 @@ function connectToDb() {
 
 <!DOCTYPE html>
 <html>
-
-<?php include('templates/header.php') ?>
+<head>
+    <title>This is a title</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MySQL/PHP/HTML learning project">
+    <meta name="author" content="Martin Cupak">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
 <body class="blue darken-2">
+<header>
+    <nav class="nav-wrapper blue">
+        <div class="row">
+            <a href='#' class="brand-logo brand-text col s6 offset-s3 center-align" style="font-size: calc(60% + 1vw)">TMA HEALTHCARE CENTRAL</a>
+        </div>
+    </nav>
+</header>
+
 <section class="container black-text">
     <p></p>
     <form class="blue lighten-1 z-depth-1" action="index.php" method="POST">

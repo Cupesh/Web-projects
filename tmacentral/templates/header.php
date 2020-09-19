@@ -11,9 +11,5 @@
     <nav class="nav-wrapper blue">
         <div class="row">
             <a href='#' class="brand-logo brand-text col s6 offset-s3 center-align" style="font-size: calc(60% + 1vw)">TMA HEALTHCARE CENTRAL</a>
-            <ul id="nav-mobile hide-on-small-and-down col s3" class="right">
-                <li><a href='menu.php' class="brand z-depth-0">MENU</a></li>
-                <li><a href='index.php' class="brand z-depth-0">LOGIN</a></li>
-            </ul>
         </div>
     </nav>
