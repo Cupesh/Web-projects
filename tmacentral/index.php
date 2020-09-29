@@ -13,8 +13,10 @@ function connectToDb() {
             echo 'Connection error: '.mysqli_connect_error();
             $_SESSION['loggedIn'] = false;
         } else {
-            $_SESSION['user'] = strtoupper($username);
+            $_SESSION['user'] = $username;
+            $_SESSION['password'] = $_POST['password'];
             $_SESSION['loggedIn'] = true;
+            mysqli_close($connection);
             header('Location: menu.php');
         }
 }
@@ -47,7 +49,13 @@ function connectToDb() {
     <form class="blue lighten-1 z-depth-1" action="index.php" method="POST">
         <div class="row">
             <div class="input-field col s6 offset-s3">
-                <input id="username" type="text" placeholder="Username" name="username" class="validate">
+                <select id="username" name="username">
+                    <label>User</label>
+                    <option value="" disabled selected>Select user</option>
+                    <option value="admin">admin</option>
+                    <option value="manager">manager</option>
+                </select>
+
             </div>
         </div>
         <div class="row">
